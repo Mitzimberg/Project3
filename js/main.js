@@ -96,3 +96,18 @@ coconuts.forEach(coconutId => {
         }
     });
 });
+
+const closedBrella = document.getElementById('ClosedBrella');
+const openBrella = document.getElementById('OpenBrella');
+
+closedBrella.addEventListener('click', () => {
+    closedBrella.classList.add('hidden');
+
+    openBrella.style.display = 'block';
+    openBrella.classList.remove('hidden');
+
+    // Optionally, fade in the open umbrella
+    setTimeout(() => {
+        openBrella.style.opacity = '1';
+    }, 10);
+});

@@ -98,6 +98,14 @@
     animation: fall 0.5s forwards;
 }
 
+#ClosedBrella, #OpenBrella {
+    transition: opacity 0.5s ease;
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 @keyframes wave {
     0%, 100% {
         transform: translateY(0);
