@@ -1,1 +1,102 @@
-/* Place CSS styles here */
+.body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.graphic {
+    width: 148vw;
+    height: 145vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -17vh;
+    left: -25.5vw;
+}
+
+#Water1 {
+    animation: wave 12s infinite;
+    transition: ease-in-out;
+}
+#Water4 {
+    animation: wave 16s infinite;
+    transition: ease-in-out;
+}
+#Water2 {
+    animation: wave3 8s infinite;
+    transition: ease-in;
+}
+#Water3 {
+    animation: wave2 8s infinite;
+    transition: ease-in;
+}
+
+#Surfboard {
+    cursor: pointer;
+}
+#wholeCrab {
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+#LArm, #RArm {
+    animation: crabarms 1s infinite;
+}
+
+#LifePreserver {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    transform-origin: 50% 100%;
+}
+
+#Paradise {
+    user-select: none;
+    animation: intro 5s;
+    transition: ease-in;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes wave2 {
+    0%, 100% {
+        transform: scaleY(100%);
+    }
+    50% {
+        transform: scaleY(101%)
+    }
+}
+@keyframes wave3 {
+    0%, 100% {
+        transform: scaleY(100%);
+    }
+    50% {
+        transform: scaleY(103%)
+    }
+}
+@keyframes crabarms {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px)
+    }
+}
+@keyframes intro {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
