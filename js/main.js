@@ -73,3 +73,26 @@ lifePreserver.addEventListener('click', () => {
         lifePreserver.style.transform = 'scale(1)';
     }, 300);
 });
+
+const coconuts = ['LCoconut1', 'LCoconut2', 'LCoconut3', 'RCoconut1', 'RCocounut2'];
+const coconutStates = {};
+
+coconuts.forEach(coconutId => {
+    const coconut = document.getElementById(coconutId);
+    coconutStates[coconutId] = { clickCount: 0 };
+
+    coconut.addEventListener('click', () => {
+        coconutStates[coconutId].clickCount++;
+
+        coconut.classList.add('shake');
+
+        setTimeout(() => {
+            coconut.classList.remove('shake');
+        }, 150);
+
+        if (coconutStates[coconutId].clickCount >= 3) {
+            coconut.classList.add('fall');
+            coconut.removeEventListener('click', arguments.callee);
+        }
+    });
+});

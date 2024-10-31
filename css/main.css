@@ -60,6 +60,44 @@
     transition: ease-in;
 }
 
+#LLeaf1, #LLeaf3, #LLeaf4, #LLeaf7 {
+    animation: sway 6s infinite;
+    transition: ease-in;
+}
+#LLeaf2, #LLeaf5, #LLeaf6 {
+    animation: sway2 6s infinite;
+    transition: ease-in-out;
+}
+
+#RLeaf1, #RLeaf3 {
+    animation: sway 6s infinite;
+    transition: ease-in-out;
+}
+#RLeaf5, #RLeaf6 {
+    animation: sway2 6s infinite;
+    transition: ease-in-out;
+}
+#RLeaf4, #RLeaf7, #RLeaf2 {
+    animation: sway3 6s infinite;
+    transition: ease-in-out;
+}
+
+#Leaf1, #Leaf2, #Leaf4{
+    animation: sway3 6s infinite;
+    transition: ease-in-out;
+}
+#Leaf3, #Leaf4-2 {
+    animation: sway 6s infinite;
+    transition: ease-in-out;
+}
+
+.shake {
+    animation: shake 0.1s ease-in-out;
+}
+.fall {
+    animation: fall 0.5s forwards;
+}
+
 @keyframes wave {
     0%, 100% {
         transform: translateY(0);
@@ -99,4 +137,54 @@
     100% {
         transform: translateY(0);
     }
+}
+@keyframes sway {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(0.1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes sway2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-0.1deg);
+    }
+    75% {
+        transform: rotate(0.1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes sway3 {
+    0% {
+        transform: rotate(0deg)
+    }
+    25% {
+        transform: rotate(0.1deg)
+    }
+    65% {
+        transform: rotate(-0.1deg);
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-4px); }
+    50% { transform: translate(3px); }
+    75% { transform: translate(-4px); }
+    100% { transform: translate(0); }
+}
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100px); opacity: 0; }
 }
